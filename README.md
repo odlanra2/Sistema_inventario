@@ -16,3 +16,10 @@ Realizar una consulta que permita conocer cuál es el producto que más stock ti
 
 
 SELECT nombre,precio, stock FROM productos WHERE stock = (SELECT MAX( stock ) FROM productos);
+
+
+para saber cual es el priducto mas vendido agrege un campo a la tabla productos ventas y esta es la consulta:
+
+
+
+SELECT nombre,precio, stock, ventas FROM productos WHERE ventas = (SELECT MAX( ventas ) FROM productos);
