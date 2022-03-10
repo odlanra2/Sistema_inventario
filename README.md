@@ -13,4 +13,6 @@ private  $ClaveDB    = "";
 Este sistema esta desarrollado en php nativo y Mysql, para una mejor experiencia utilice la libreria de jquery y para los estilos bootstrap
 
 Realizar una consulta que permita conocer cuál es el producto que más stock tiene:
+
+
 SELECT nombre,precio, stock FROM productos WHERE stock = (SELECT MAX( stock ) FROM productos);
