@@ -79,6 +79,26 @@ class productoModels{
 
 	 }
 
+   public function vender_productos($id){
+       $this->nConexion    = $this->conexion->conectarBD();
+       $this->sql="SELECT stock, ventas FROM productos where ID='$id'";
+       $this->ra = mysqli_query( $this->nConexion,$this->sql)or trigger_error("Error en consulta! SQL: $query - Error: ".mysqli_error(), E_USER_ERROR);
+
+       $stock = mysqli_fetch_assoc($this->ra);
+
+      
+       if($stock['stock']>0){
+            $stock = $stock['stock'] - 1;
+            $ventas = $stock['ventas'] + 1;
+            $sql = "UPDATE productos SET  stock='".$stock."', ventas='".$ventas."' WHERE ID = ".$id;
+              $update =  mysqli_query( $this->nConexion , $sql ); 
+           return $sql;
+       }
+     
+
+
+   }
+
    
 
 

@@ -28,6 +28,11 @@ class Productos{
          
          return  $this->productoModel->delete_producto($id);
 	}
+
+	public function vender($id){
+         
+		  return  $this->productoModel->vender_productos($id);
+	}
 }
 
 ?>

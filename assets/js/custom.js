@@ -104,6 +104,22 @@ $(document).ready(function(){
    	  
    })
 
+
+   $('.vender').click(function(e){
+          e.preventDefault();
+          
+          var id_perfil =$(this).attr( 'href' );
+          
+          $('.pre-load').addClass('preload-active');
+          $.get('./'+id_perfil, function( data ) {
+               $('.pre-load').removeClass('preload-active'); 
+               //console.log(data);   
+               location.reload();
+         }, "json");
+
+
+   });
+
 //funcion para validar los campos
 function inpustRequires(form) {
   var return_value	=	true;

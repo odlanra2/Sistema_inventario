@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 10-03-2022 a las 22:27:13
+-- Tiempo de generación: 10-03-2022 a las 23:50:43
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.3.29
 
@@ -35,6 +35,7 @@ CREATE TABLE `productos` (
   `peso` int(11) NOT NULL,
   `categoria` varchar(200) NOT NULL,
   `stock` int(11) NOT NULL,
+  `ventas` int(11) NOT NULL,
   `fecha_creacion` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -42,10 +43,10 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`ID`, `nombre`, `referencia`, `precio`, `peso`, `categoria`, `stock`, `fecha_creacion`) VALUES
-(1, 'Café', '3456778', 1000, 3, 'Bebidas', 40, '2022-03-10 14:07:44'),
-(2, 'Dona', '32456789', 15000, 26, 'Postre', 45, '2022-03-10 16:58:50'),
-(3, 'Pizza', '3456789', 15000, 260, 'Snacks Salados', 4, '2022-03-10 17:26:18');
+INSERT INTO `productos` (`ID`, `nombre`, `referencia`, `precio`, `peso`, `categoria`, `stock`, `ventas`, `fecha_creacion`) VALUES
+(1, 'Café', '3456778', 1000, 3, 'Bebidas', 37, 1, '2022-03-10 14:07:44'),
+(2, 'Dona', '32456789', 15000, 26, 'Postre', 45, 0, '2022-03-10 16:58:50'),
+(4, 'Pizza', '4242424', 15000, 260, 'salados', 34, 0, '2022-03-10 18:37:56');
 
 --
 -- Índices para tablas volcadas
@@ -65,7 +66,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

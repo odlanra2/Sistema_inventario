@@ -13,9 +13,24 @@ if(isset($_GET['id']) && isset($_GET['delete'])){
  	  exit;
     
 }
+
+if(isset($_GET['id']) && isset($_GET['vender'])){
+ 	  $id = $_GET['id'];
+      
+ 	
+ 	  $respuesta = $productos->vender($id);
+ 	  echo json_encode($respuesta);
+
+ 	 
+
+ 	  exit;
+    
+}
+
 if(isset($_POST)){
 	  $respuesta = $productos->add_producto($_POST);
 }
+
 
 
 echo json_encode($respuesta);

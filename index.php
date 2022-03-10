@@ -56,7 +56,11 @@ $productos = new Productos();
 
                           <a class='delete' title="Eliminar producto"  style="margin-left:20px" href="productos_handle.php?id=<?php echo $producto['ID'] ?>&delete='eliminar'">
                                <span class="icon-bin"></span>
-                           </a>  
+                           </a> 
+
+                            <a class='vender' title="vender"  style="margin-left:20px" href="productos_handle.php?id=<?php echo $producto['ID'] ?>&vender='vender'">
+                              Vender
+                           </a>   
 				      		
                        
 				      	</td>
