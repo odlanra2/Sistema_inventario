@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 11-03-2022 a las 13:34:33
+-- Tiempo de generación: 11-03-2022 a las 13:39:14
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.3.29
 
@@ -45,8 +45,8 @@ CREATE TABLE `productos` (
 
 INSERT INTO `productos` (`ID`, `nombre`, `referencia`, `precio`, `peso`, `categoria`, `stock`, `ventas`, `fecha_creacion`) VALUES
 (1, 'Café', '3456778', 1000, 45, 'Bebidass', 30, 1, '2022-03-10 14:07:44'),
-(2, 'GEL ALCACHOFA ', '32456789', 15000, 260, 'dabada', 42, 1, '2022-03-11 08:32:11'),
-(3, 'GEL ALCACHOFA ', '32456789', 15000, 260, 'pirata', 34, 0, '2022-03-11 08:33:45');
+(2, 'Donas ', '32456789', 15000, 260, 'Postre', 42, 1, '2022-03-11 08:32:11'),
+(3, 'Pizza', '32456789', 15000, 260, 'salados', 34, 0, '2022-03-11 08:33:45');
 
 --
 -- Índices para tablas volcadas
